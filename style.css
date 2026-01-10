@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #938f8f;
+}
+
+.img-logo1 {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+main {
+    width: 450px;
+    background: #e8e2e2ea;
+    border-radius: 20px;
+    margin: 0 auto 40px;
+    padding: 45px 30px;
+}
+
+label {
+    color: #777777b7;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+select,
+input {
+    border: 1px solid;
+    border-radius: 4px;
+    background: #ffffff;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 24px;
+    appearance: none;
+    /*faz desaparecer as selitas do select*/
+    padding-left: 18px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+button {
+    background: #772fd3;
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    transition: 0.1s;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+button:active {
+    opacity: .5;
+}
+
+section {
+    border-radius: 20px;
+    border: 1px solid #772fd3;
+    margin-top: 36px;
+    padding: 12px;
+    display: flex;
+    /*PODE-SE USAR ESTE SELECTOR EM DIV, MAIN,ETC*/
+    flex-direction: column;
+    /*CON ESTE TODOS OS ITENS FICA EM COLUNA*/
+    align-items: center;
+    background: #ffffffae;
+}
+
+.arrow-img {
+    margin: 15px 0;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    /*um selector proporcionado display-flex, con este voce consegue separar os items, ex: aqui deu espaço entre os items de 4px*/
+}
+
+.currency {
+    color: #777777;
+    font-size: 14px;
+}
+
+.currency-img ,.currency-img1,.currency-img2 {
+    width: 44PX;
+    height: 44px;
+}
+
+.currency-value,
+.currency-value-to-convert,
+.input-currency {
+    font-size: 20px;
+    color: #555555;
+    font-weight: 700;
+}
