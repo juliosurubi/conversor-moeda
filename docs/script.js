@@ -104,7 +104,7 @@ function changeCurrency() {
 
     if (currencySelect.value === "boliviano") {
         currencyName.innerHTML = "Boliviano"
-        currencyImg.src = "./img/logoBOLIVIA.png"
+        currencyImg.src = "./img/logoBOLIVIANO.png"
     }
 
     // Atualiza a conversão automaticamente
