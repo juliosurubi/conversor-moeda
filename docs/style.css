@@ -1,37 +1,44 @@
-/* Reset básico para remover margens/paddings padrão e aplicar fonte */
+/* Reset básico */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    outline: none; /* ⚠️ Remove o contorno padrão de inputs/botões. Pode afetar acessibilidade (usuários de teclado). */
+    outline: none; /* ⚠️ Remove o contorno padrão de inputs/botões */
 }
 
 body {
     background-color: #938f8f; /* Cor de fundo da página */
 }
 
+/* Container centralizado */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza conteúdo vertical e horizontal */
+    justify-content: center;
+    padding: 20px; /* Adiciona espaçamento interno para telas pequenas */
 }
 
+/* Logo principal */
 .img-logo1 {
     width: 300px;
-    height: 300px;
-    /* Sugestão: usar max-width: 100% para responsividade */
-}
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;;
+    height: auto; /* Mantém proporção da imagem */
+    max-width: 100%; /* Responsivo: nunca ultrapassa a tela */
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza texto em telas pequenas */
+}
+
+/* Caixa principal */
 main {
-    width: 450px;
-    background: #e8e2e2ea; /* Cor com transparência (hex + alpha) */
+    width: 100%; /* Ocupa toda largura disponível */
+    max-width: 450px; /* Limite para telas grandes */
+    background: #e8e2e2ea;
     border-radius: 20px;
     padding: 45px 30px;
     display: flex;
@@ -39,33 +46,36 @@ main {
     flex-direction: column;
 }
 
+/* Labels */
 label {
-    color: #777777b7; /* Cinza com transparência */
+    color: #777777b7;
     font-weight: 400;
     font-size: 14px;
 }
 
+/* Inputs e selects */
 select,
 input {
-    border: 1px solid #ccc; /* ✅ Corrigido: antes estava sem cor definida */
+    border: 1px solid #ccc;
     border-radius: 4px;
     background: #ffffff;
     height: 48px;
     width: 100%;
     margin-bottom: 24px;
-    appearance: none; /* Remove setas padrão do select */
+    appearance: none;
     padding-left: 18px;
     font-weight: 700;
     font-size: 16px;
 }
 
+/* Botão */
 button {
     background: #772fd3;
     border-radius: 15px;
     width: 100%;
-    height: 40px; /* ✅ Corrigido: altura aumentada para melhor usabilidade */
+    height: 48px; /* Altura maior para toque em celular */
     border: none;
-    transition: opacity 0.1s ease-in-out; /* ✅ Corrigido: especificada a propriedade da transição */
+    transition: opacity 0.1s ease-in-out;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
@@ -79,26 +89,29 @@ button:active {
     opacity: .5;
 }
 
+/* Caixa de resultado */
 section {
     border-radius: 20px;
     border: 1px solid #772fd3;
     margin-top: 36px;
     padding: 12px;
     display: flex;
-    flex-direction: column; /* Organiza itens em coluna */
+    flex-direction: column;
     align-items: center;
-    background: #ffffffae; /* Branco com transparência */
+    background: #ffffffae;
 }
 
 .arrow-img {
     margin: 15px 0;
+    max-width: 40px; /* Ajusta seta para telas pequenas */
 }
 
+/* Caixa de moeda */
 .currency-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px; /* Espaço entre elementos */
+    gap: 4px;
 }
 
 .currency {
@@ -106,12 +119,10 @@ section {
     font-size: 14px;
 }
 
-.currency-img,
-.currency-img1,
-.currency-img2 {
-    width: 44px; /* ✅ Corrigido: antes estava "44PX" (case-sensitive) */
+.currency-img {
+    width: 44px;
     height: 44px;
-    /* Sugestão: usar apenas uma classe .currency-img e aplicar em todos */
+    max-width: 100%; /* Responsivo */
 }
 
 .currency-value,
@@ -120,4 +131,44 @@ section {
     font-size: 20px;
     color: #555555;
     font-weight: 700;
+    text-align: center; /* Centraliza valores em telas pequenas */
+}
+
+/* 📱 Media Queries para telas menores */
+@media (max-width: 600px) {
+    main {
+        padding: 25px 15px; /* Reduz padding em celulares */
+    }
+
+    .img-logo1 {
+        width: 200px; /* Logo menor em telas pequenas */
+    }
+
+    button {
+        font-size: 14px; /* Texto menor no botão */
+    }
+
+    .currency-value,
+    .currency-value-to-convert {
+        font-size: 18px; /* Ajusta tamanho da fonte */
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .img-logo1 {
+        width: 150px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    select,
+    input {
+        font-size: 14px;
+    }
 }
