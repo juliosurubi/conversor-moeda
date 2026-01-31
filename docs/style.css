@@ -16,6 +16,17 @@
     font-family: var(--font-family);
 }
 
+h1 {
+    background-color: #ccc;              /* fundo cinza */
+    font-family: 'Orbitron', sans-serif; /* fonte Orbitron */
+    font-size: 2rem;                     /* tamanho relativo (responsivo) */
+    text-align: center;                  /* centraliza o texto */
+    padding: 10px;                       /* espaço interno */
+    border-radius: 8px;                  /* cantos arredondados */
+    color: #333;                         /* cor do texto */
+}
+
+
 /* Mantém acessibilidade: outline visível mas estilizado */
 button:focus,
 input:focus,
